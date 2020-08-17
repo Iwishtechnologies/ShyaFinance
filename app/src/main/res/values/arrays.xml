@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="arr_residence_type">
+        <item>Select Residence Type</item>
+        <item>Owned</item>
+        <item>Rented</item>
+    </string-array>
+    <string-array name="array_account_type">
+        <item>Select Account Type</item>
+        <item>Saving</item>
+        <item>Current</item>
+    </string-array>
+    <string-array name="array_apl_form_residence_type">
+        <item>Select Residence Type</item>
+        <item>OWNED SELF</item>
+        <item>OWNED PARENTS</item>
+        <item>OWNED WITH SPOUSE</item>
+        <item>RENTED SELF</item>
+        <item>RENTED FAMILY</item>
+        <item>RENTED FRIENDS</item>
+        <item>OTHERS</item>
+    </string-array>
+    <string-array name="array_apl_form_residing_since">
+        <item>Select Residing Since</item>
+        <item>LESS THAN 1 YEAR</item>
+        <item>1-2 YEARS</item>
+        <item>MORE THAN 2 YEARS</item>
+    </string-array>
+    <string-array name="array_bank_account_type">
+        <item>Select Bank Account Type</item>
+        <item>Savings Account</item>
+        <item>Current Account</item>
+        <item>Overdraft</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="array_city">
+        <item>Select City</item>
+        <item>Mumbai</item>
+        <item>Pune</item>
+        <item>Delhi</item>
+        <item>Chennai</item>
+        <item>Bengaluru</item>
+        <item>Hyderabad</item>
+        <item>Ahmedabad</item>
+        <item>Jaipur</item>
+        <item>Kolkata</item>
+        <item>Other</item>
+    </string-array>
+    <array name="array_dot_active">
+        <item>@color/yellow_tangerine</item>
+        <item>@color/yellow_tangerine</item>
+        <item>@color/yellow_tangerine</item>
+        <item>@color/yellow_tangerine</item>
+    </array>
+    <array name="array_dot_inactive">
+        <item>@color/white</item>
+        <item>@color/white</item>
+        <item>@color/white</item>
+        <item>@color/white</item>
+    </array>
+    <string-array name="array_employment_employment_duration">
+        <item>Select Employment Duration</item>
+        <item>LESS THAN 1 YEAR</item>
+        <item>1-2 YEARS</item>
+        <item>2-4 YEARS</item>
+        <item>5-7 YEARS</item>
+        <item>7-10 YEARS</item>
+        <item>MORE THAN 10 YEARS</item>
+        <item>MORE THAN 2 YEARS</item>
+        <item>3-7 YEARS</item>
+    </string-array>
+    <string-array name="array_employment_self_employed_professional_profession">
+        <item>Architecture</item>
+        <item>CA/CS</item>
+        <item>Consultant</item>
+        <item>Doctor</item>
+        <item>Engineer</item>
+        <item>Lawyer</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="array_employment_self_employed_professional_profession_apply">
+        <item>Select Profession</item>
+        <item>Architecture</item>
+        <item>CA/CS</item>
+        <item>Consultant</item>
+        <item>Doctor</item>
+        <item>Engineer</item>
+        <item>Lawyer</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="array_gender">
+        <item>Select Gender</item>
+        <item>MALE</item>
+        <item>FEMALE</item>
+    </string-array>
+    <string-array name="array_new_employment_type">
+        <item>Select Employment Type</item>
+        <item>Salaried</item>
+        <item>Self Employed</item>
+        <item>Self Employed Professional</item>
+    </string-array>
+    <string-array name="array_prof_emp_sep_prof">
+        <item>Select Profession</item>
+        <item>Architecture</item>
+        <item>CA/CS</item>
+        <item>Consultant</item>
+        <item>Doctor</item>
+        <item>Engineer</item>
+        <item>Lawyer</item>
+        <item>Other</item>
+    </string-array>
+    <array name="com_google_android_gms_fonts_certs">
+        <item>@array/com_google_android_gms_fonts_certs_dev</item>
+        <item>@array/com_google_android_gms_fonts_certs_prod</item>
+    </array>
+    <string-array name="com_google_android_gms_fonts_certs_dev">
+        <item>MIIEqDCCA5CgAwIBAgIJANWFuGx90071MA0GCSqGSIb3DQEBBAUAMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbTAeFw0wODA0MTUyMzM2NTZaFw0zNTA5MDEyMzM2NTZaMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbTCCASAwDQYJKoZIhvcNAQEBBQADggENADCCAQgCggEBANbOLggKv+IxTdGNs8/TGFy0PTP6DHThvbbR24kT9ixcOd9W+EaBPWW+wPPKQmsHxajtWjmQwWfna8mZuSeJS48LIgAZlKkpFeVyxW0qMBujb8X8ETrWy550NaFtI6t9+u7hZeTfHwqNvacKhp1RbE6dBRGWynwMVX8XW8N1+UjFaq6GCJukT4qmpN2afb8sCjUigq0GuMwYXrFVee74bQgLHWGJwPmvmLHC69EH6kWr22ijx4OKXlSIx2xT1AsSHee70w5iDBiK4aph27yH3TxkXy9V89TDdexAcKk/cVHYNnDBapcavl7y0RiQ4biu8ymM8Ga/nmzhRKya6G0cGw8CAQOjgfwwgfkwHQYDVR0OBBYEFI0cxb6VTEM8YYY6FbBMvAPyT+CyMIHJBgNVHSMEgcEwgb6AFI0cxb6VTEM8YYY6FbBMvAPyT+CyoYGapIGXMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbYIJANWFuGx90071MAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEEBQADggEBABnTDPEF+3iSP0wNfdIjIz1AlnrPzgAIHVvXxunW7SBrDhEglQZBbKJEk5kT0mtKoOD1JMrSu1xuTKEBahWRbqHsXclaXjoBADb0kkjVEJu/Lh5hgYZnOjvlba8Ld7HCKePCVePoTJBdI4fvugnL8TsgK05aIskyY0hKI9L8KfqfGTl1lzOv2KoWD0KWwtAWPoGChZxmQ+nBli+gwYMzM1vAkP+aayLe0a1EQimlOalO762r0GXO0ks+UeXde2Z4e+8S/pf7pITEI/tP+MxJTALw9QUWEv9lKTk+jkbqxbsh8nfBUapfKqYn0eidpwq2AzVp3juYl7//fKnaPhJD9gs=</item>
+    </string-array>
+    <string-array name="com_google_android_gms_fonts_certs_prod">
+        <item>MIIEQzCCAyugAwIBAgIJAMLgh0ZkSjCNMA0GCSqGSIb3DQEBBAUAMHQxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtHb29nbGUgSW5jLjEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDAeFw0wODA4MjEyMzEzMzRaFw0zNjAxMDcyMzEzMzRaMHQxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtHb29nbGUgSW5jLjEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDCCASAwDQYJKoZIhvcNAQEBBQADggENADCCAQgCggEBAKtWLgDYO6IIrgqWbxJOKdoR8qtW0I9Y4sypEwPpt1TTcvZApxsdyxMJZ2JORland2qSGT2y5b+3JKkedxiLDmpHpDsz2WCbdxgxRczfey5YZnTJ4VZbH0xqWVW/8lGmPav5xVwnIiJS6HXk+BVKZF+JcWjAsb/GEuq/eFdpuzSqeYTcfi6idkyugwfYwXFU1+5fZKUaRKYCwkkFQVfcAs1fXA5V+++FGfvjJ/CxURaSxaBvGdGDhfXE28LWuT9ozCl5xw4Yq5OGazvV24mZVSoOO0yZ31j7kYvtwYK6NeADwbSxDdJEqO4k//0zOHKrUiGYXtqw/A0LFFtqoZKFjnkCAQOjgdkwgdYwHQYDVR0OBBYEFMd9jMIhF1Ylmn/Tgt9r45jk14alMIGmBgNVHSMEgZ4wgZuAFMd9jMIhF1Ylmn/Tgt9r45jk14aloXikdjB0MQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEUMBIGA1UEChMLR29vZ2xlIEluYy4xEDAOBgNVBAsTB0FuZHJvaWQxEDAOBgNVBAMTB0FuZHJvaWSCCQDC4IdGZEowjTAMBgNVHRMEBTADAQH/MA0GCSqGSIb3DQEBBAUAA4IBAQBt0lLO74UwLDYKqs6Tm8/yzKkEu116FmH4rkaymUIE0P9KaMftGlMexFlaYjzmB2OxZyl6euNXEsQH8gjwyxCUKRJNexBiGcCEyj6z+a1fuHHvkiaai+KL8W1EyNmgjmyy8AW7P+LLlkR+ho5zEHatRbM/YAnqGcFh5iZBqpknHf1SKMXFh4dd239FJ1jWYfbMDMy3NS5CTMQ2XFI1MvcyUTdZPErjQfTbQe3aDQsQcafEQPD+nqActifKZ0Np0IS9L9kR/wbNvyz6ENwPiTrjV2KRkEjH78ZMcUQXg0L3BYHJ3lc69Vs5Ddf9uUGGMYldX3WfMBEmh/9iFBDAaTCK</item>
+    </string-array>
+    <string-array name="marital_status">
+        <item>Select Marital Status</item>
+        <item>Single</item>
+        <item>Married</item>
+    </string-array>
+    <string-array name="mmt_no_of_persons">
+        <item>Select No. Of Persons</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>5+</item>
+    </string-array>
+    <string-array name="mmt_user_type">
+        <item>Select User Type</item>
+        <item>Personal</item>
+        <item>Business</item>
+    </string-array>
+    <string-array name="mmt_voucher_type">
+        <item>Select Voucher Type</item>
+        <item>Ticket Booking</item>
+        <item>Tour Booking</item>
+        <item>Tour &amp; Ticket Booking</item>
+    </string-array>
+    <array name="rect_color">
+        <item>@color/color_blue</item>
+        <item>@color/color_brown</item>
+        <item>@color/color_green</item>
+        <item>@color/divider_grey</item>
+        <item>@color/color_orange</item>
+    </array>
+    <string-array name="tenure_array">
+        <item>3 Months</item>
+        <item>6 Months</item>
+        <item>9 Months</item>
+        <item>12 Months</item>
+        <item>15 Months</item>
+        <item>18 Months</item>
+        <item>24 Months</item>
+    </string-array>
+</resources>

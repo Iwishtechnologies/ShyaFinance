@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout  
+            android:orientation="vertical"  
+            android:background="@color/white"  
+            android:fitsSystemWindows="true"  
+            android:layout_width="fill_parent"  
+            android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.Toolbar
+            android:id="@id/ve_toolbar"  
+            android:background="@android:color/white"
+            android:layout_width="fill_parent"  
+            android:layout_height="?actionBarSize"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:theme="@style/ToolbarTheme"
+            app:titleTextColor="@android:color/white" />
+    <LinearLayout  
+            android:orientation="vertical"  
+            android:layout_width="fill_parent"  
+            android:layout_height="0.0dip"  
+            android:layout_weight="1.0">
+        <LinearLayout  
+            android:orientation="vertical"  
+            android:layout_width="fill_parent"  
+            android:layout_height="fill_parent">
+            <TextView  
+            android:textSize="18.0sp"  
+            android:textColor="@color/black"  
+            android:layout_width="wrap_content"  
+            android:layout_height="wrap_content"  
+            android:layout_marginLeft="20.0dip"  
+            android:layout_marginRight="@dimen/dimen_20dp"  
+            android:text="@string/enter_the_otp_received_on_your_mobile"  
+            android:fontFamily="@font/poppins_regular" app:fontFamily="@font/poppins_regular" />
+            <LinearLayout  
+            android:orientation="horizontal"  
+            android:layout_width="fill_parent"  
+            android:layout_height="wrap_content"  
+            android:layout_marginLeft="20.0dip"  
+            android:layout_marginTop="@dimen/dimen_10dp"  
+            android:layout_marginRight="@dimen/dimen_20dp">
+                <TextView  
+            android:textSize="18.0sp"  
+            android:textColor="@color/black"  
+            android:id="@+id/mobile_number_tv"
+            android:layout_width="wrap_content"  
+            android:layout_height="wrap_content"  
+            android:text=""  
+            android:fontFamily="@font/poppins_semibold" />
+                <TextView  
+            android:textSize="18.0sp"  
+            android:textColor="@color/colorPrimary"  
+            android:id="@+id/change_tv"
+            android:layout_width="wrap_content"  
+            android:layout_height="wrap_content"  
+            android:layout_marginLeft="@dimen/dimen_10dp"  
+            android:text="change?"  
+            android:fontFamily="@font/poppins_semibold" />
+            </LinearLayout>
+            <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txt_input_otp"
+            android:layout_width="fill_parent"  
+            android:layout_height="wrap_content"  
+            android:layout_marginLeft="@dimen/dimen_20dp"  
+            android:layout_marginTop="@dimen/dimen_10dp"  
+            android:layout_marginRight="@dimen/dimen_20dp"  
+            android:hint="@string/text_otp"
+                app:errorEnabled="false"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_otp"
+            android:layout_width="fill_parent"  
+            android:layout_height="wrap_content"  
+            android:maxLength="6"  
+            android:inputType="number"  
+            android:textAllCaps="true"  
+            android:fontFamily="@font/poppins_regular" app:backgroundTint="@color/secondary_text" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <TextView  
+            android:textSize="16.0sp"  
+            android:textColor="@color/black"  
+            android:gravity="right"  
+            android:layout_gravity="right"  
+            android:id="@+id/timer_tv"
+            android:visibility="gone"  
+            android:layout_width="fill_parent"  
+            android:layout_height="wrap_content"  
+            android:layout_marginLeft="@dimen/dimen_20dp"  
+            android:layout_marginRight="@dimen/dimen_20dp"  
+            android:text="(00:22)"  
+            android:fontFamily="@font/poppins_semibold" />
+            <TextView  
+            android:textSize="18.0sp"  
+            android:textColor="@color/colorPrimary"  
+            android:gravity="right"  
+            android:layout_gravity="right"  
+            android:id="@+id/resend_tv"
+            android:visibility="gone"  
+            android:layout_width="fill_parent"  
+            android:layout_height="wrap_content"  
+            android:layout_marginLeft="@dimen/dimen_20dp"  
+            android:layout_marginRight="@dimen/dimen_20dp"  
+            android:text="@string/text_resend_question"  
+            android:fontFamily="@font/poppins_semibold" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout  
+            android:orientation="horizontal"  
+            android:layout_width="fill_parent"  
+            android:layout_height="wrap_content"  
+            android:layout_margin="@dimen/dimen_20dp">
+        <Button  
+            android:textSize="18.0sp"  
+            android:textColor="@color/white"  
+            android:gravity="center"  
+            android:layout_gravity="right"  
+            android:id="@id/next_button"  
+            android:background="@drawable/border_primary_fastcash"  
+            android:padding="@dimen/dimen_10dp"  
+            android:layout_width="fill_parent"  
+            android:layout_height="wrap_content"  
+            android:text="@string/submit"  
+            android:textAllCaps="false" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/ve_toolbar"
+        android:background="@android:color/white"
+        android:layout_width="fill_parent"
+        android:layout_height="?actionBarSize"
+        app:popupTheme="@style/AppTheme.PopupOverlay"
+        app:theme="@style/ToolbarTheme"
+        app:titleTextColor="@android:color/white" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_weight="1.0">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+            <TextView
+                android:textSize="20.0sp"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20.0dip"
+                android:layout_marginRight="@dimen/dimen_20dp"
+                android:text="@string/login_with_your_registered_mobile_number"
+                android:fontFamily="@font/poppins_regular"
+                app:fontFamily="@font/poppins_regular" />
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/txt_input_mobile_number"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20.0dip"
+                android:hint="@string/text_mobile_number"
+                app:errorEnabled="false"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/et_mobile_number"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLength="10"
+                    android:drawablePadding="@dimen/dimen_10dp"
+                    android:inputType="number"
+                    android:textAllCaps="true"
+                    android:fontFamily="@font/poppins_regular"
+                    app:backgroundTint="@color/secondary_text" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <TextView
+                android:textSize="14.0sp"
+                android:gravity="center_vertical"
+                android:background="@drawable/border_grey_background_white_semi_curved_fastcash"
+                android:paddingLeft="@dimen/dimen_10dp"
+                android:layout_width="fill_parent"
+                android:layout_height="?actionBarSize"
+                android:layout_marginLeft="20.0dip"
+                android:layout_marginRight="@dimen/dimen_20dp"
+                android:layout_marginBottom="@dimen/dimen_20dp"
+                android:text="@string/text_note_not_exsting_user"
+                android:drawableLeft="@drawable/bulb"
+                android:drawablePadding="@dimen/dimen_5dp" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/dimen_20dp">
+        <Button android:textSize="18.0sp" android:textColor="@color/white" android:gravity="center" android:layout_gravity="right" android:id="@+id/next_button" android:background="@drawable/border_primary_fastcash" android:padding="@dimen/dimen_10dp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/text_get_otp" android:drawableRight="@drawable/right_arrow_fastcash" android:textAllCaps="false" />
+    </LinearLayout>
+</LinearLayout>
