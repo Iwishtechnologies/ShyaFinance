@@ -1,10 +1,13 @@
 package tech.iwish.shyafinance.activites;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
+import android.widget.Toast;
 
 import org.jetbrains.annotations.NotNull;
 import org.json.JSONArray;
@@ -12,6 +15,8 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 import okhttp3.Call;
 import okhttp3.MediaType;
@@ -19,14 +24,17 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
+import tech.iwish.shyafinance.Fragment.MainFragment;
 import tech.iwish.shyafinance.R;
 import tech.iwish.shyafinance.adapter.SilderAdapter;
 import tech.iwish.shyafinance.config.Config;
 import tech.iwish.shyafinance.config.JsonHelper;
+import tech.iwish.shyafinance.model.ClientLoanList;
 
 public class HomeActivity extends AppCompatActivity {
 
     ViewPager viewpager;
+    List<ClientLoanList> clientLoanLists = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,16 +42,34 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home);
 
         viewpager = findViewById(R.id.viewpager);
+        AccountDetails();
 
 
-        SilderAdapter silderAdapter = new SilderAdapter();
-        viewpager.setAdapter(silderAdapter);
+        viewpager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+
+                MainFragment mainFragment = new MainFragment(clientLoanLists.get(position).getAccount_no());
+                getSupportFragmentManager().beginTransaction().replace(R.id.LoanFrameLayout, mainFragment).commit();
+
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+            }
+        });
+
 
     }
 
 
-
-    private void AccountDetails(){
+    private void AccountDetails() {
 
         OkHttpClient okHttpClient = new OkHttpClient();
         MediaType JSON = MediaType.parse("application/json; charset=utf-8");
@@ -75,8 +101,35 @@ public class HomeActivity extends AppCompatActivity {
 
                             for (int i = 0; i < jsonArray.length(); i++) {
                                 jsonHelper.setChildjsonObj(jsonArray, i);
-
+                                clientLoanLists.add(new ClientLoanList(
+                                        jsonHelper.GetResult("sno")
+                                        , jsonHelper.GetResult("client_id")
+                                        , jsonHelper.GetResult("account_no")
+                                        , jsonHelper.GetResult("client_type")
+                                        , jsonHelper.GetResult("name")
+                                ));
                             }
+
+
+                            HomeActivity.this.runOnUiThread(new Runnable() {
+                                @Override
+                                public void run() {
+                                    SilderAdapter silderAdapter = new SilderAdapter(clientLoanLists);
+                                    viewpager.setAdapter(silderAdapter);
+                                }
+                            });
+
+//                            new Thread(new Runnable() {
+//                                @Override
+//                                public void run() {
+//                                    new Handler().post(new Runnable() {
+//                                        @Override
+//                                        public void run() {
+//
+//                                        }
+//                                    });
+//                                }
+//                            });
                         }
                     }
                 }
@@ -85,11 +138,6 @@ public class HomeActivity extends AppCompatActivity {
 
 
     }
-
-
-
-
-
 
 
 }

@@ -14,15 +14,17 @@ import tech.iwish.shyafinance.R;
 
 public class MainFragment extends Fragment {
     RecyclerView recyclerView;
+    String loanId;
 
-    public MainFragment(){
-
+    public MainFragment(String loanId){
+        this.loanId = loanId;
     }
+
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-       View view= inflater.inflate(R.layout.main_fragment, container, false);
+       View view= inflater.inflate(R.layout.main_fragment, null);
         InitaiteFragment(view);
         SetFragmentData();
         FragmentAction();
