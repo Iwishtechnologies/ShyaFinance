@@ -44,7 +44,6 @@ public class HomeActivity extends AppCompatActivity {
         viewpager = findViewById(R.id.viewpager);
         AccountDetails();
 
-
         viewpager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
@@ -54,7 +53,7 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public void onPageSelected(int position) {
 
-                MainFragment mainFragment = new MainFragment(clientLoanLists.get(position).getAccount_no());
+                MainFragment mainFragment = new MainFragment(clientLoanLists.get(position).getAccount_no(),HomeActivity.this);
                 getSupportFragmentManager().beginTransaction().replace(R.id.LoanFrameLayout, mainFragment).commit();
 
             }
@@ -116,6 +115,9 @@ public class HomeActivity extends AppCompatActivity {
                                 public void run() {
                                     SilderAdapter silderAdapter = new SilderAdapter(clientLoanLists);
                                     viewpager.setAdapter(silderAdapter);
+
+                                    MainFragment mainFragment = new MainFragment(clientLoanLists.get(0).getAccount_no(),HomeActivity.this);
+                                    getSupportFragmentManager().beginTransaction().replace(R.id.LoanFrameLayout, mainFragment).commit();
                                 }
                             });
 

@@ -34,29 +34,33 @@
 
             <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_weight="1"
+                android:layout_weight="2"
                 android:orientation="vertical"
                 android:layout_height="wrap_content">
                 <TextView
                     android:layout_width="match_parent"
                     android:text="Installment 1"
-                    android:textSize="@dimen/_10sdp"
+                    android:id="@+id/installment"
+                    android:textSize="@dimen/_13sdp"
                     android:fontFamily="sans-serif-condensed-medium"
-                    android:layout_height="wrap_content"/>
-
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:text="Amount to Pay  ₹1500"
-                    android:textSize="@dimen/_10sdp"
-                    android:fontFamily="serif-monospace"
                     android:layout_height="wrap_content"/>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:text="Last Date 26 Sept 2020"
-                    android:textSize="@dimen/_10sdp"
+                    android:textSize="@dimen/_12sdp"
+                    android:id="@+id/date"
+                    android:layout_marginTop="@dimen/_5sdp"
                     android:fontFamily="sans-serif-smallcaps"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="Amount to Pay  ₹1500"
+                    android:textSize="@dimen/_14sdp"
+                    android:id="@+id/amount"
+                    android:textColor="@color/black"
+                    android:fontFamily="sans-serif-condensed"
                     android:layout_height="wrap_content"/>
 
             </LinearLayout>
@@ -64,6 +68,7 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_weight="1"
+                android:visibility="gone"
                 android:orientation="vertical"
                 android:layout_height="wrap_content">
                 <TextView
@@ -99,11 +104,13 @@
             android:gravity="center"
             android:layout_height="match_parent">
 
-            <com.google.android.material.button.MaterialButton
+            <Button
                 android:layout_width="@dimen/_50sdp"
                 android:text="pay"
                 android:background="@drawable/background_blue_curved"
                 android:textSize="@dimen/_9sdp"
+                android:fontFamily="sans-serif-black"
+                android:textColor="@color/white"
                 android:layout_height="@dimen/_30sdp"
                 tools:ignore="SpUsage" />
 
