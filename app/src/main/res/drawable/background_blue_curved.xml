@@ -5,6 +5,6 @@
       xmlns:android="http://schemas.android.com/apk/res/android">
         <solid android:color="@color/home_blue_color" />
         <padding android:left="1.0dip" android:top="0.0dip" android:right="1.0dip" android:bottom="1.0dip" />
-        <corners android:topRightRadius="@dimen/dimen_5dp" android:bottomRightRadius="@dimen/dimen_5dp" />
+        <corners android:topRightRadius="@dimen/dimen_5dp" android:bottomRightRadius="@dimen/dimen_5dp"  android:bottomLeftRadius="@dimen/dimen_5dp" android:radius="@dimen/dimen_5dp"/>
     </shape>
 </inset>
