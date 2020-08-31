@@ -96,11 +96,14 @@ public class HomeActivity extends AppCompatActivity {
             InvestWithUsFragment mainFragment = new InvestWithUsFragment();
             getSupportFragmentManager().beginTransaction().replace(R.id.LoanFrameLayout, mainFragment).commit();});
         wallet.setOnClickListener(v -> {
-            WalletFragment mainFragment = new WalletFragment();
-            getSupportFragmentManager().beginTransaction().replace(R.id.LoanFrameLayout, mainFragment).commit();});
-        home.setOnClickListener(v -> {
-//            MainFragment mainFragment = new MainFragment(clientLoanLists.get(position).getAccount_no(),HomeActivity.this);
+                    Toast.makeText(this, "This feature will come soon", Toast.LENGTH_SHORT).show();
+
+//            WalletFragment mainFragment = new WalletFragment();
 //            getSupportFragmentManager().beginTransaction().replace(R.id.LoanFrameLayout, mainFragment).commit();
+            });
+        home.setOnClickListener(v -> {
+            MainFragment mainFragment = new MainFragment(clientLoanLists.get(0).getAccount_no(),HomeActivity.this);
+            getSupportFragmentManager().beginTransaction().replace(R.id.LoanFrameLayout, mainFragment).commit();
             });
     }
 

@@ -9,6 +9,6 @@ public  class Config {
     public static String login = "loginuser";
         public static String ACCOUNT_DETAILS = url + "account_details";
         public static String EMIDETAIL = url + "GetEMIDetail";
-        public static String Offer = url + "offer";
+        public static String OFFER = url + "offer";
 
 }

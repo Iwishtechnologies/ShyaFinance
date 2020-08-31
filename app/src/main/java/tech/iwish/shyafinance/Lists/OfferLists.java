@@ -34,7 +34,7 @@ public class OfferLists {
         return image;
     }
 
-    public String getDiscriptiontId(){
+    public String getDiscriptiont(){
         return discription;
     }
 }

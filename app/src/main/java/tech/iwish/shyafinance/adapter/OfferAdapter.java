@@ -1,20 +1,26 @@
 package tech.iwish.shyafinance.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
+
 import java.util.ArrayList;
 import java.util.List;
 
+import de.hdodenhof.circleimageview.CircleImageView;
 import tech.iwish.shyafinance.Lists.EmiDetailList;
 import tech.iwish.shyafinance.Lists.OfferLists;
 import tech.iwish.shyafinance.R;
+import tech.iwish.shyafinance.activites.OfferDetailActivity;
 
 public class OfferAdapter  extends RecyclerView.Adapter<OfferAdapter.Viewholder> {
     Context context;
@@ -36,29 +42,33 @@ public class OfferAdapter  extends RecyclerView.Adapter<OfferAdapter.Viewholder>
 
     @Override
     public void onBindViewHolder(@NonNull Viewholder holder, int position) {
-//        installment=position+1;
-//        holder.amount.setText("Amount to pay ₹"+emiDetailLists.get(position).getEmiamount());
-//        holder.date.setText("LAST DATE "+emiDetailLists.get(position).getEmidate());
-//        holder.installment.setText("Installment "+installment);
-//        holder.pay.setText("PAY ₹ "+emiDetailLists.get(position).getEmiamount());
 
+        holder.title.setText(offerLists.get(position).getTitle());
+        holder.discription.setText(offerLists.get(position).getDiscriptiont());
+        holder.title.setText(offerLists.get(position).getTitle());
+        Glide.with(context).load(offerLists.get(position).getImage()).centerCrop().placeholder(R.drawable.girl).into(holder.image);
+        holder.view.setOnClickListener(v -> {
+             context.startActivity(new Intent(context, OfferDetailActivity.class).putExtra("id",offerLists.get(position).getId()).putExtra("title",offerLists.get(position).getTitle()).putExtra("image",offerLists.get(position).getImage()).putExtra("discription",offerLists.get(position).getDiscriptiont()));
+        });
     }
 
 
     @Override
     public int getItemCount() {
-        return 500;
+        return offerLists.size();
 //        return offerLists.size();
     }
 
     public class Viewholder extends RecyclerView.ViewHolder {
-        TextView amount,date,installment,pay;
+        TextView title,discription;
+        CircleImageView image;
+        LinearLayout view;
         public Viewholder(@NonNull View itemView) {
             super(itemView);
-            amount= itemView.findViewById(R.id.amount);
-            date= itemView.findViewById(R.id.date);
-            installment= itemView.findViewById(R.id.installment);
-            pay= itemView.findViewById(R.id.pay);
+            image= itemView.findViewById(R.id.image);
+            title= itemView.findViewById(R.id.title);
+            discription= itemView.findViewById(R.id.discription);
+            view= itemView.findViewById(R.id.view);
         }
     }
 }

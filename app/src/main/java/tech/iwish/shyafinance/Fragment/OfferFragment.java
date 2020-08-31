@@ -11,6 +11,9 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.cooltechworks.views.shimmer.ShimmerRecyclerView;
+
 import org.jetbrains.annotations.NotNull;
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -34,7 +37,8 @@ import tech.iwish.shyafinance.config.Config;
 import tech.iwish.shyafinance.config.JsonHelper;
 
 public class OfferFragment extends Fragment {
-    RecyclerView recyclerView;
+//    RecyclerView recyclerView;
+    ShimmerRecyclerView recyclerView;
     Context context;
     List<OfferLists> offerLists= new ArrayList<>();
 
@@ -73,7 +77,7 @@ public class OfferFragment extends Fragment {
         }
         RequestBody body = RequestBody.create(JSON, jsonObject.toString());
         Request request = new Request.Builder().post(body)
-                .url(Config.EMIDETAIL)
+                .url(Config.OFFER)
                 .build();
         client.newCall(request).enqueue(new okhttp3.Callback() {
             @Override
