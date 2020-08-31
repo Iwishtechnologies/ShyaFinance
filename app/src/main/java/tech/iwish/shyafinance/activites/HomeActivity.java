@@ -7,6 +7,8 @@ import androidx.viewpager.widget.ViewPager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
+import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import org.jetbrains.annotations.NotNull;
@@ -24,7 +26,11 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
+import tech.iwish.shyafinance.Fragment.InvestWithUsFragment;
 import tech.iwish.shyafinance.Fragment.MainFragment;
+import tech.iwish.shyafinance.Fragment.OfferFragment;
+import tech.iwish.shyafinance.Fragment.ProfileFragment;
+import tech.iwish.shyafinance.Fragment.WalletFragment;
 import tech.iwish.shyafinance.R;
 import tech.iwish.shyafinance.adapter.SilderAdapter;
 import tech.iwish.shyafinance.config.Config;
@@ -32,7 +38,7 @@ import tech.iwish.shyafinance.config.JsonHelper;
 import tech.iwish.shyafinance.model.ClientLoanList;
 
 public class HomeActivity extends AppCompatActivity {
-
+    LinearLayout home,wallet,offer,profile,Investwithus;
     ViewPager viewpager;
     List<ClientLoanList> clientLoanLists = new ArrayList<>();
 
@@ -40,33 +46,63 @@ public class HomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-
-        viewpager = findViewById(R.id.viewpager);
+        InitializeActivity();
         AccountDetails();
+        ActivityAction();
 
-        viewpager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
-            @Override
-            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-
-            }
-
-            @Override
-            public void onPageSelected(int position) {
-
-                MainFragment mainFragment = new MainFragment(clientLoanLists.get(position).getAccount_no(),HomeActivity.this);
-                getSupportFragmentManager().beginTransaction().replace(R.id.LoanFrameLayout, mainFragment).commit();
-
-            }
-
-            @Override
-            public void onPageScrollStateChanged(int state) {
-
-            }
-        });
 
 
     }
 
+
+
+
+    public void InitializeActivity(){
+        viewpager = findViewById(R.id.viewpager);
+        home = findViewById(R.id.home);
+        wallet = findViewById(R.id.loan);
+        offer = findViewById(R.id.offer);
+        profile = findViewById(R.id.profile);
+        Investwithus = findViewById(R.id.investwithus);
+    }
+
+    private void SetActivityData(){
+
+    }
+
+    protected void ActivityAction(){
+        viewpager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+            }
+            @Override
+            public void onPageSelected(int position) {
+                MainFragment mainFragment = new MainFragment(clientLoanLists.get(position).getAccount_no(),HomeActivity.this);
+                getSupportFragmentManager().beginTransaction().replace(R.id.LoanFrameLayout, mainFragment).commit();
+            }
+            @Override
+            public void onPageScrollStateChanged(int state) {
+            }
+        });
+        profile.setOnClickListener(v -> {
+            viewpager.setVisibility(View.GONE);
+            ProfileFragment mainFragment = new ProfileFragment();
+            getSupportFragmentManager().beginTransaction().replace(R.id.LoanFrameLayout, mainFragment).commit();});
+        offer.setOnClickListener(v -> {
+            viewpager.setVisibility(View.GONE);
+            OfferFragment mainFragment = new OfferFragment(HomeActivity.this);
+            getSupportFragmentManager().beginTransaction().replace(R.id.LoanFrameLayout, mainFragment).commit();});
+        Investwithus.setOnClickListener(v -> {
+            InvestWithUsFragment mainFragment = new InvestWithUsFragment();
+            getSupportFragmentManager().beginTransaction().replace(R.id.LoanFrameLayout, mainFragment).commit();});
+        wallet.setOnClickListener(v -> {
+            WalletFragment mainFragment = new WalletFragment();
+            getSupportFragmentManager().beginTransaction().replace(R.id.LoanFrameLayout, mainFragment).commit();});
+        home.setOnClickListener(v -> {
+//            MainFragment mainFragment = new MainFragment(clientLoanLists.get(position).getAccount_no(),HomeActivity.this);
+//            getSupportFragmentManager().beginTransaction().replace(R.id.LoanFrameLayout, mainFragment).commit();
+            });
+    }
 
     private void AccountDetails() {
 

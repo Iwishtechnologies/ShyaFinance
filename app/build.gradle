@@ -6,7 +6,7 @@ android {
 
     defaultConfig {
         applicationId "tech.iwish.shyafinancae"
-        minSdkVersion 16
+        minSdkVersion 21
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
@@ -20,6 +20,10 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 }
 
 dependencies {
@@ -32,5 +36,7 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
     implementation "com.squareup.okhttp3:okhttp:4.8.1"
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+    implementation 'com.github.jgabrielfreitas:BlurImageView:1.0.1'
 
 }

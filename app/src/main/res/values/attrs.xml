@@ -1147,7 +1147,7 @@
     <attr name="queryBackground" format="reference" />
     <attr name="queryHint" format="string" />
     <attr name="radioButtonStyle" format="reference" />
-    <attr name="radius" format="dimension" />
+    <attr name="radiuss" format="dimension" />
     <attr name="ratingBarStyle" format="reference" />
     <attr name="ratingBarStyleIndicator" format="reference" />
     <attr name="ratingBarStyleSmall" format="reference" />

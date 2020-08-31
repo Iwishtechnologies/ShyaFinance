@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:blurkit="http://schemas.android.com/tools">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:gravity="center|center_vertical"
+            android:layout_height="@dimen/_250sdp">
+
+            <com.jgabrielfreitas.core.BlurImageView
+                android:id="@+id/dogBlurImageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:radius="2"
+                android:scaleType="fitXY"
+                android:src="@drawable/girl" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:id="@+id/profileImage"
+                android:layout_marginTop="40dp"
+                android:orientation="horizontal"
+                android:layout_marginLeft="@dimen/_30sdp"
+                android:layout_height="wrap_content">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/profile_image"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:src="@drawable/girl"
+                    app:civ_border_width="3dp"
+                    app:civ_border_color="@color/white"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:weightSum="2"
+                    android:paddingLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:textAlignment="center"
+                            android:textSize="@dimen/dimen_16dp"
+                            android:fontFamily="sans-serif-black"
+                            android:text="DOB"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:textAlignment="center"
+                            android:textSize="@dimen/dimen_16dp"
+                            android:fontFamily="sans-serif-black"
+                            android:text="10 Aug 1987"/>
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_below="@id/profileImage"
+                android:paddingTop="@dimen/_20sdp"
+                android:paddingLeft="@dimen/_10sdp"
+                android:orientation="vertical"
+                android:gravity=""
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Yashashya Tiwari"
+                    android:fontFamily="sans-serif-black"
+                    android:textColor="@color/white"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Married"
+                    android:layout_marginLeft="@dimen/_30sdp"
+                    android:fontFamily="sans-serif-black"
+                    android:textColor="@color/white"/>
+
+            </LinearLayout>
+
+
+
+
+
+
+            
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_weight="1.2"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:background="@color/blue_light"
+                android:layout_height="2dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:background="@drawable/theme_border"
+                    android:gravity="center"
+                    android:padding="@dimen/_10sdp"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:fontFamily="sans-serif-black"
+                        android:text="My Details"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:gravity="center_vertical"
+                android:padding="@dimen/_20sdp"
+                android:weightSum="2"
+                android:layout_margin="@dimen/_5sdp"
+                android:background="@drawable/detail_background"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_15sdp"
+                        android:fontFamily="sans-serif-condensed"
+                        android:text="Adhar Card"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_15sdp"
+                        android:fontFamily="sans-serif"
+                        android:text="\u2713"/>
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:gravity="center_vertical"
+                android:padding="@dimen/_20sdp"
+                android:weightSum="2"
+                android:layout_margin="@dimen/_5sdp"
+                android:background="@drawable/detail_background"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_15sdp"
+                        android:fontFamily="sans-serif-condensed"
+                        android:text="PAN Card"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_15sdp"
+                        android:fontFamily="sans-serif"
+                        android:text="\u2713"/>
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:gravity="center_vertical"
+                android:padding="@dimen/_20sdp"
+                android:weightSum="2"
+                android:layout_margin="@dimen/_5sdp"
+                android:background="@drawable/detail_background"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_15sdp"
+                        android:fontFamily="sans-serif-condensed"
+                        android:text="Mobile Number"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_15sdp"
+                        android:fontFamily="sans-serif"
+                        android:text="\u2713"/>
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:gravity="center_vertical"
+                android:padding="@dimen/_20sdp"
+                android:weightSum="2"
+                android:layout_margin="@dimen/_5sdp"
+                android:background="@drawable/detail_background"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_15sdp"
+                        android:fontFamily="sans-serif-condensed"
+                        android:text="Email"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_15sdp"
+                        android:fontFamily="sans-serif"
+                        android:text="\u2713"/>
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:gravity="center_vertical"
+                android:padding="@dimen/_20sdp"
+                android:weightSum="2"
+                android:layout_margin="@dimen/_5sdp"
+                android:background="@drawable/detail_background"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_15sdp"
+                        android:fontFamily="sans-serif-condensed"
+                        android:text="Address"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_15sdp"
+                        android:fontFamily="sans-serif"
+                        android:text="\u2713"/>
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

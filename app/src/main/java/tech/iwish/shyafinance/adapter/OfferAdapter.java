@@ -13,40 +13,42 @@ import java.util.ArrayList;
 import java.util.List;
 
 import tech.iwish.shyafinance.Lists.EmiDetailList;
+import tech.iwish.shyafinance.Lists.OfferLists;
 import tech.iwish.shyafinance.R;
 
-public class LoanAdapter extends RecyclerView.Adapter<LoanAdapter.Viewholder> {
+public class OfferAdapter  extends RecyclerView.Adapter<OfferAdapter.Viewholder> {
     Context context;
     int installment=1;
-    List<EmiDetailList> emiDetailLists= new ArrayList<>();
+    List<OfferLists> offerLists= new ArrayList<>();
 
 
-    public LoanAdapter( List<EmiDetailList>emiDetailLists,Context context){
-     this.context=context;
-     this.emiDetailLists=emiDetailLists;
+    public OfferAdapter( List<OfferLists>offerLists,Context context){
+        this.context=context;
+        this.offerLists=offerLists;
     }
     @NonNull
     @Override
     public Viewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.row_installment_design , null);
+        View view = LayoutInflater.from(context).inflate(R.layout.row_offer_design , null);
         Viewholder viewholder =  new Viewholder(view);
         return viewholder;
     }
 
     @Override
     public void onBindViewHolder(@NonNull Viewholder holder, int position) {
-        installment=position+1;
-      holder.amount.setText("Amount to pay ₹"+emiDetailLists.get(position).getEmiamount());
-      holder.date.setText("LAST DATE "+emiDetailLists.get(position).getEmidate());
-      holder.installment.setText("Installment "+installment);
-      holder.pay.setText("PAY ₹ "+emiDetailLists.get(position).getEmiamount());
+//        installment=position+1;
+//        holder.amount.setText("Amount to pay ₹"+emiDetailLists.get(position).getEmiamount());
+//        holder.date.setText("LAST DATE "+emiDetailLists.get(position).getEmidate());
+//        holder.installment.setText("Installment "+installment);
+//        holder.pay.setText("PAY ₹ "+emiDetailLists.get(position).getEmiamount());
 
     }
 
 
     @Override
     public int getItemCount() {
-        return emiDetailLists.size();
+        return 500;
+//        return offerLists.size();
     }
 
     public class Viewholder extends RecyclerView.ViewHolder {

@@ -109,6 +109,7 @@
                 android:text="pay"
                 android:background="@drawable/background_blue_curved"
                 android:textSize="@dimen/_9sdp"
+                android:id="@+id/pay"
                 android:fontFamily="sans-serif-black"
                 android:textColor="@color/white"
                 android:layout_height="@dimen/_30sdp"
