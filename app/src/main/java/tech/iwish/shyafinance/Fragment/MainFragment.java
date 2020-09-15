@@ -30,6 +30,7 @@ import okhttp3.RequestBody;
 import okhttp3.Response;
 import tech.iwish.shyafinance.Lists.EmiDetailList;
 import tech.iwish.shyafinance.R;
+import tech.iwish.shyafinance.activites.ActivityFragement;
 import tech.iwish.shyafinance.activites.HomeActivity;
 import tech.iwish.shyafinance.adapter.LoanAdapter;
 import tech.iwish.shyafinance.config.Config;
@@ -41,7 +42,7 @@ public class MainFragment extends Fragment {
     Context context;
     List<EmiDetailList>emiDetailLists= new ArrayList<>();
 
-    public MainFragment(String loanId, HomeActivity context){
+    public MainFragment(String loanId, Context context){
         this.loanId = loanId;
         this.context=context;
     }

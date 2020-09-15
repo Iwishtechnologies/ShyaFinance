@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ewalle_home"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#171822">
+
+
+     <FrameLayout
+         android:id="@+id/LoanFrameLayout"
+         android:layout_weight="1.9"
+         android:visibility="gone"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"/>
+
+
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:weightSum="3"
+         android:id="@+id/mainView"
+         android:orientation="vertical"
+         android:padding="@dimen/_10sdp"
+         android:visibility="visible"
+         android:layout_height="match_parent">
+
+
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:weightSum="3"
+              android:layout_weight="0.2"
+              android:gravity="center_vertical"
+              android:layout_height="wrap_content">
+
+               <LinearLayout
+                   android:layout_width="wrap_content"
+                   android:layout_weight="0.3"
+                   android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/group_16"/>
+               </LinearLayout>
+
+               <LinearLayout
+                   android:layout_width="wrap_content"
+                   android:layout_weight="1.7"
+                   android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/shya_finance"/>
+
+               </LinearLayout>
+
+               <LinearLayout
+                   android:layout_width="wrap_content"
+                   android:layout_weight="1"
+                   android:gravity="right"
+                   android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:src="@drawable/union"/>
+               </LinearLayout>
+
+          </LinearLayout>
+
+
+
+
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_weight="2.6"
+              android:weightSum="3"
+              android:orientation="vertical"
+              android:layout_marginTop="@dimen/_20sdp"
+              android:layout_height="wrap_content">
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:paddingTop="@dimen/_20sdp"
+                   android:layout_weight="0.1"
+                   android:paddingBottom="@dimen/_20sdp"
+                   android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/account_overview"/>
+               </LinearLayout>
+
+<!--               <com.cooltechworks.views.shimmer.ShimmerRecyclerView-->
+<!--                   android:layout_width="match_parent"-->
+<!--                   android:layout_height="wrap_content"-->
+<!--                   android:layout_weight="1.2"-->
+<!--                   android:id="@+id/viewpager"/>-->
+
+               <androidx.viewpager.widget.ViewPager
+                   android:id="@+id/viewpager1"
+                   android:layout_width="match_parent"
+                   android:layout_height="150dp"
+                   />
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_weight="2.7"
+                   android:layout_marginBottom="@dimen/_5sdp"
+                   android:layout_marginTop="@dimen/_5sdp"
+                   android:layout_height="wrap_content">
+
+                    <androidx.cardview.widget.CardView
+                        app:cardCornerRadius="6dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                         <com.smarteist.autoimageslider.SliderView
+                             android:id="@+id/imageSlider"
+                             android:layout_width="match_parent"
+                             android:layout_height="200dp"
+                             app:sliderAnimationDuration="600"
+                             app:sliderAutoCycleDirection="back_and_forth"
+                             app:sliderAutoCycleEnabled="true"
+                             app:sliderIndicatorAnimationDuration="600"
+                             app:sliderIndicatorGravity="center_horizontal|bottom"
+                             app:sliderIndicatorMargin="15dp"
+                             app:sliderIndicatorOrientation="horizontal"
+                             app:sliderIndicatorPadding="3dp"
+                             app:sliderIndicatorRadius="2dp"
+                             app:sliderIndicatorSelectedColor="#5A5A5A"
+                             app:sliderIndicatorUnselectedColor="#FFF"
+                             app:sliderScrollTimeInSec="1"
+                             app:sliderStartAutoCycle="true" />
+
+                    </androidx.cardview.widget.CardView>
+
+               </LinearLayout>
+
+
+
+          </LinearLayout>
+
+
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:orientation="vertical"
+              android:layout_weight="0.2"
+              android:layout_height="wrap_content">
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content">
+
+
+               </LinearLayout>
+
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:orientation="horizontal"
+                   android:weightSum="4"
+                   android:layout_height="wrap_content">
+
+                    <ImageView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:src="@drawable/cashback_offer"/>
+
+                    <ImageView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:src="@drawable/movie_tickets"/>
+
+                    <ImageView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:src="@drawable/flight_tickets"/>
+
+                    <ImageView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:src="@drawable/more_options"/>
+
+
+
+
+
+               </LinearLayout>
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:orientation="horizontal"
+                   android:weightSum="4"
+                   android:padding="@dimen/_10sdp"
+                   android:visibility="visible"
+                   android:layout_marginBottom="@dimen/_10sdp"
+                   android:layout_marginTop="@dimen/_15sdp"
+                   android:layout_height="wrap_content">
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/earn_with_us_button"/>
+
+
+                    <!--                    <ImageView-->
+                    <!--                        android:layout_width="wrap_content"-->
+                    <!--                        android:layout_height="wrap_content"-->
+                    <!--                        android:layout_weight="1"-->
+                    <!--                        android:scaleType="fitCenter"-->
+                    <!--                        android:src="@drawable/send_money"/>-->
+
+                    <!--                    <ImageView-->
+
+                    <!--                        android:layout_width="wrap_content"-->
+                    <!--                        android:layout_height="wrap_content"-->
+                    <!--                        android:layout_weight="1"-->
+                    <!--                        android:src="@drawable/receive_money"/>-->
+
+                    <!--                    <ImageView-->
+
+                    <!--                        android:layout_width="wrap_content"-->
+                    <!--                        android:layout_height="wrap_content"-->
+                    <!--                        android:layout_weight="1"-->
+                    <!--                        android:src="@drawable/mobile_prepaid"/>-->
+
+                    <!--                    <ImageView-->
+
+                    <!--                        android:layout_width="wrap_content"-->
+                    <!--                        android:layout_height="wrap_content"-->
+                    <!--                        android:layout_weight="1"-->
+                    <!--                        android:src="@drawable/electricity_bill"/>-->
+
+
+
+
+
+               </LinearLayout>
+
+
+          </LinearLayout>
+
+
+
+
+     </LinearLayout>
+
+
+
+</RelativeLayout>

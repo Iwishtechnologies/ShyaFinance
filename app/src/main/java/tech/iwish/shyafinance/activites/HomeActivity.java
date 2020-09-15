@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
@@ -50,8 +52,6 @@ public class HomeActivity extends AppCompatActivity {
         AccountDetails();
         ActivityAction();
 
-
-
     }
 
 
@@ -93,8 +93,15 @@ public class HomeActivity extends AppCompatActivity {
             OfferFragment mainFragment = new OfferFragment(HomeActivity.this);
             getSupportFragmentManager().beginTransaction().replace(R.id.LoanFrameLayout, mainFragment).commit();});
         Investwithus.setOnClickListener(v -> {
-            InvestWithUsFragment mainFragment = new InvestWithUsFragment();
-            getSupportFragmentManager().beginTransaction().replace(R.id.LoanFrameLayout, mainFragment).commit();});
+//            InvestWithUsFragment mainFragment = new InvestWithUsFragment();
+//            getSupportFragmentManager().beginTransaction().replace(R.id.LoanFrameLayout, mainFragment).commit();
+
+
+
+
+
+
+        });
         wallet.setOnClickListener(v -> {
                     Toast.makeText(this, "This feature will come soon", Toast.LENGTH_SHORT).show();
 
@@ -152,7 +159,7 @@ public class HomeActivity extends AppCompatActivity {
                             HomeActivity.this.runOnUiThread(new Runnable() {
                                 @Override
                                 public void run() {
-                                    SilderAdapter silderAdapter = new SilderAdapter(clientLoanLists);
+                                    SilderAdapter silderAdapter = new SilderAdapter(clientLoanLists,HomeActivity.this);
                                     viewpager.setAdapter(silderAdapter);
 
                                     MainFragment mainFragment = new MainFragment(clientLoanLists.get(0).getAccount_no(),HomeActivity.this);

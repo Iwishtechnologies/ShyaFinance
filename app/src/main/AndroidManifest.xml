@@ -12,8 +12,16 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".activites.OfferDetailActivity"></activity>
-        <activity android:name=".activites.HomeActivity">
+        <activity android:name=".activites.ActivityFragement"></activity>
+        <activity android:name=".activites.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activites.OfferDetailActivity" />
+        <activity android:name=".activites.HomeActivity" android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
