@@ -20,7 +20,7 @@ public class ActivityFragement extends AppCompatActivity {
     protected void ActivityAction(String type){
         switch (type){
             case "detail":
-                MainFragment mainFragment = new MainFragment("1",ActivityFragement.this);
+                MainFragment mainFragment = new MainFragment(getIntent().getStringExtra("loanid"),ActivityFragement.this);
                 getSupportFragmentManager().beginTransaction().replace(R.id.LoanFrameLayout, mainFragment).commit();
 
         }

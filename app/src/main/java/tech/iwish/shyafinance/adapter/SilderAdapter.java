@@ -52,7 +52,7 @@ public class SilderAdapter extends PagerAdapter {
         View view = layoutInflater.inflate(R.layout.row_card_layout, container, false);
         InitializeAdapter(view);
         SetAdapterData(position);
-        AdapterAction();
+        AdapterAction(position);
         container.addView(view);
         return view;
     }
@@ -77,7 +77,7 @@ public class SilderAdapter extends PagerAdapter {
         type.setText("Account Type - "+list.getClient_type());
     }
 
-    protected void AdapterAction(){
-         mainview.setOnClickListener(v -> {context.startActivity(new Intent(context, ActivityFragement.class).putExtra("type","detail")); });
+    protected void AdapterAction(int position){
+         mainview.setOnClickListener(v -> {context.startActivity(new Intent(context, ActivityFragement.class).putExtra("type","detail").putExtra("loanid",clientLoanLists.get(position).getAccount_no())); });
     }
 }

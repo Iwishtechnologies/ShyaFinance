@@ -10,5 +10,6 @@ public  class Config {
         public static String ACCOUNT_DETAILS = url + "account_details";
         public static String EMIDETAIL = url + "GetEMIDetail";
         public static String OFFER = url + "offer";
+        public static String GETBANNER = url + "Getbanner";
 
 }

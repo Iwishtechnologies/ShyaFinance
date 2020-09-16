@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
         InitializeActivity();
         SetActivityData();
         ActivityAction();
-        SetAlider();
+        SetSlider();
         AccountDetails();
     }
 
@@ -120,22 +120,65 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    protected void SetAlider(){
-        mSliderItems.add(new SliderItem("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.C6q8im59YJPT0M0kuRRtywHaDt%26pid%3DApi&f=1"));
-        mSliderItems.add(new SliderItem("https://i.pinimg.com/originals/23/77/9c/23779c59cb16ed5519ca4c0711f85e3c.jpg"));
-        mSliderItems.add(new SliderItem("https://media.istockphoto.com/illustrations/floral-horizontal-border-watercolor-meadow-flowers-grass-herbs-frame-illustration-id518522602"));
-        mSliderItems.add(new SliderItem("https://www.flowersforever.ie/wp-content/uploads/2014/04/Wedding-Flowers-5.jpg"));
+    protected void SetSlider(){
+        OkHttpClient okHttpClient = new OkHttpClient();
+        MediaType JSON = MediaType.parse("application/json; charset=utf-8");
+        JSONObject jsonObject = new JSONObject();
+        try {
+            jsonObject.put( "clientId", "1");
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        RequestBody body = RequestBody.create(JSON, jsonObject.toString());
+        Request request1 = new Request.Builder().url(Config.GETBANNER).post(body).build();
+        okHttpClient.newCall(request1).enqueue(new okhttp3.Callback() {
+            @Override
+            public void onFailure(@NotNull Call call, @NotNull IOException e) {
+                e.printStackTrace();
+            }
 
-        SliderView sliderView = findViewById(R.id.imageSlider);
-        SliderAdapter adapter = new SliderAdapter(MainActivity.this,mSliderItems);
-        sliderView.setSliderAdapter(adapter);
-        sliderView.setIndicatorAnimation(IndicatorAnimationType.WORM); //set indicator animation by using IndicatorAnimationType. :WORM or THIN_WORM or COLOR or DROP or FILL or NONE or SCALE or SCALE_DOWN or SLIDE and SWAP!!
-        sliderView.setSliderTransformAnimation(SliderAnimations.SIMPLETRANSFORMATION);
-        sliderView.setAutoCycleDirection(SliderView.AUTO_CYCLE_DIRECTION_BACK_AND_FORTH);
-        sliderView.setIndicatorSelectedColor(Color.WHITE);
-        sliderView.setIndicatorUnselectedColor(Color.GRAY);
-        sliderView.setScrollTimeInSec(4);
-        sliderView.startAutoCycle();
+            @Override
+            public void onResponse(@NotNull Call call, @NotNull Response response) throws IOException {
+                if (response.isSuccessful()) {
+                    String result = response.body().string();
+                    Log.e("result", result);
+                    JsonHelper jsonHelper = new JsonHelper(result);
+                    if (jsonHelper.isValidJson()) {
+                        String responses = jsonHelper.GetResult("response");
+                        if (responses.equals("TRUE")) {
+
+                            JSONArray jsonArray = jsonHelper.setChildjsonArray(jsonHelper.getCurrentJsonObj(), "data");
+
+                            for (int i = 0; i < jsonArray.length(); i++) {
+                                jsonHelper.setChildjsonObj(jsonArray, i);
+                                mSliderItems.add(new SliderItem(
+                                        jsonHelper.GetResult("image")
+                                ));
+                            }
+
+
+                            MainActivity.this.runOnUiThread(() -> {
+                                SliderView sliderView = findViewById(R.id.imageSlider);
+                                SliderAdapter adapter = new SliderAdapter(MainActivity.this,mSliderItems);
+                                sliderView.setSliderAdapter(adapter);
+                                sliderView.setIndicatorAnimation(IndicatorAnimationType.WORM);
+                                sliderView.setSliderTransformAnimation(SliderAnimations.SIMPLETRANSFORMATION);
+                                sliderView.setAutoCycleDirection(SliderView.AUTO_CYCLE_DIRECTION_BACK_AND_FORTH);
+                                sliderView.setIndicatorSelectedColor(Color.WHITE);
+                                sliderView.setIndicatorUnselectedColor(Color.GRAY);
+                                sliderView.setScrollTimeInSec(4);
+                                sliderView.startAutoCycle();
+
+                            });
+
+                        }
+                    }
+                }
+            }
+        });
+
+
+
     }
 
     protected void InitializeActivity(){
